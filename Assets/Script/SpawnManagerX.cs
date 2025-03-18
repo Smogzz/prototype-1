@@ -11,7 +11,7 @@ public class SpawnManagerX : MonoBehaviour
     private float spawnPosY = 4;
 
     private float startDelay = 1.0f;
-    private float spawnInterval = 4.0f;
+    private float spawnInterval = 1.0f;
 
     // Start is called before the first frame update
     void Start()
@@ -19,13 +19,13 @@ public class SpawnManagerX : MonoBehaviour
         InvokeRepeating("SpawnRandomNPC", startDelay, spawnInterval);
     }
 
-    // Spawn random ball at random x position at top of play area
+    // Spawn random NPC at random x position at top of play area
     void SpawnRandomNPC ()
     {
         // Generate random ball index and random spawn position
         Vector3 spawnPos = new Vector3(Random.Range(spawnLimitXLeft, spawnLimitXRight), spawnPosY, 0);
 
-        // instantiate ball at random spawn location
+        // instantiate NPC at random spawn location
         Instantiate(NPCPrefabs[0], spawnPos, NPCPrefabs[0].transform.rotation);
     }
 

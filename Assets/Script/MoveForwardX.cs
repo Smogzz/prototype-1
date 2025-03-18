@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class MoveForwardX : MonoBehaviour
 {
+    //change the speed in the inspector making life easy :)
     public float speed;
 
     // Update is called once per frame
